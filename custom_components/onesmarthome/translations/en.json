@@ -1,0 +1,300 @@
+{
+  "title": "One SmartHome",
+
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect One SmartHome to Grenton",
+        "description": "Enter the controller address and access token. One SmartHome will load the interface configuration locally, create supported entities, and keep their state synchronized without using the cloud.",
+        "data": {
+          "ip_address": "Controller IP address",
+          "token": "Token"
+        },
+        "data_description": {
+          "ip_address": "Local controller IP address on the Home Assistant network, for example 192.168.100.15.",
+          "token": "Token used to authorize loading the interface configuration. It stays stored locally in Home Assistant."
+        }
+      },
+      "reconfigure": {
+        "title": "Reload the Grenton interface",
+        "description": "One SmartHome will download the interface configuration again and refresh the stored copy. Entities that no longer exist in the interface will be removed; new ones will be added.",
+        "data": {
+          "ip_address": "Controller IP address",
+          "token": "Token"
+        },
+        "data_description": {
+          "ip_address": "Local controller IP address on the Home Assistant network, for example 192.168.100.15.",
+          "token": "Token used to authorize loading the interface configuration. It stays stored locally in Home Assistant."
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "The token was rejected. Check its value and try again.",
+      "invalid_data": "The downloaded interface data is incomplete or uses an unsupported format.",
+      "cannot_connect": "Could not connect to the given controller IP address on the local network.",
+      "unknown": "An unexpected error occurred while preparing the integration."
+    },
+    "abort": {
+      "already_configured": "This Grenton installation is already set up in Home Assistant.",
+      "interface_mismatch": "The downloaded interface belongs to a different Grenton installation than this entry.",
+      "reconfigure_successful": "The interface configuration has been refreshed."
+    }
+  },
+
+  "options": {
+    "step": {
+      "init": {
+        "title": "Entity settings",
+        "description": "Pick which entity you would like to adjust.",
+        "data": {
+          "entity": "Entity"
+        }
+      },
+      "configure": {
+        "title": "{entity_name} — step {position} of {count}",
+        "description": "Adjust the settings below, then continue.",
+        "data": {
+          "device_class": "Device class",
+          "unit_of_measurement": "Unit of measurement",
+          "mode": "Display mode",
+          "state_class": "State class (statistics)"
+        }
+      }
+    },
+    "abort": {
+      "nothing_to_configure": "There is nothing here that can be adjusted.",
+      "entity_missing": "That entity is no longer available."
+    }
+  },
+
+  "device": {
+    "on_off": {
+      "name": "Switched output"
+    },
+    "on_off_double": {
+      "name": "Dual switched output"
+    },
+    "value_v2": {
+      "name": "Value reading (v2)"
+    },
+    "value_double": {
+      "name": "Dual value reading"
+    },
+    "dimmer_v2": {
+      "name": "Light dimmer (v2)"
+    },
+    "led": {
+      "name": "LED controller"
+    },
+    "slider": {
+      "name": "Level control"
+    },
+    "scene": {
+      "name": "Scene"
+    },
+    "scene_double": {
+      "name": "Dual scene"
+    },
+    "contact_sensor": {
+      "name": "Contact input"
+    },
+    "contact_sensor_double": {
+      "name": "Dual contact input"
+    },
+    "multisensor": {
+      "name": "Multi-sensor module"
+    },
+    "roller_shutter": {
+      "name": "Roller blind"
+    },
+    "roller_shutter_v3": {
+      "name": "Roller blind (v3)"
+    },
+    "camera": {
+      "name": "IP camera"
+    }
+  },
+
+  "entity": {
+    "sensor": {
+      "roller_shutter_state": {
+        "state": {
+          "stopped": "Idle",
+          "opening": "Raising",
+          "closing": "Lowering",
+          "locked": "Blocked",
+          "unknown": "Unknown"
+        }
+      }
+    }
+  },
+
+  "selector": {
+    "slider_modes": {
+      "options": {
+        "auto": "Auto",
+        "slider": "Slider",
+        "box": "Box"
+      }
+    },
+    "sensor_state_classes": {
+      "options": {
+        "none": "None (no statistics)",
+        "measurement": "Measurement",
+        "total": "Total",
+        "total_increasing": "Total increasing"
+      }
+    },
+    "slider_device_classes": {
+      "options": {
+        "apparent_power": "Apparent power",
+        "aqi": "Air quality index",
+        "area": "Area",
+        "atmospheric_pressure": "Atmospheric pressure",
+        "battery": "Battery",
+        "blood_glucose_concentration": "Blood glucose concentration",
+        "carbon_monoxide": "Carbon monoxide",
+        "carbon_dioxide": "Carbon dioxide",
+        "conductivity": "Conductivity",
+        "current": "Current",
+        "data_rate": "Data rate",
+        "data_size": "Data size",
+        "distance": "Distance",
+        "duration": "Duration",
+        "energy": "Energy",
+        "energy_storage": "Stored energy",
+        "frequency": "Frequency",
+        "gas": "Gas",
+        "humidity": "Humidity",
+        "illuminance": "Illuminance",
+        "irradiance": "Irradiance",
+        "moisture": "Moisture",
+        "monetary": "Monetary balance",
+        "nitrogen_dioxide": "Nitrogen dioxide",
+        "nitrogen_monoxide": "Nitrogen monoxide",
+        "nitrous_oxide": "Nitrous oxide",
+        "ozone": "Ozone",
+        "ph": "pH",
+        "pm1": "PM1",
+        "pm10": "PM10",
+        "pm25": "PM2.5",
+        "power_factor": "Power factor",
+        "power": "Power",
+        "precipitation": "Precipitation",
+        "precipitation_intensity": "Precipitation intensity",
+        "pressure": "Pressure",
+        "reactive_power": "Reactive power",
+        "signal_strength": "Signal strength",
+        "sound_pressure": "Sound pressure",
+        "speed": "Speed",
+        "sulphur_dioxide": "Sulphur dioxide",
+        "temperature": "Temperature",
+        "volatile_organic_compounds": "Volatile organic compounds",
+        "volatile_organic_compounds_parts": "Volatile organic compounds parts",
+        "voltage": "Voltage",
+        "volume": "Volume",
+        "volume_storage": "Stored volume",
+        "volume_flow_rate": "Volume flow rate",
+        "water": "Water",
+        "weight": "Weight",
+        "wind_speed": "Wind speed"
+      }
+    },
+    "binary_sensor_device_classes": {
+      "options": {
+        "battery": "Battery",
+        "battery_charging": "Battery charging",
+        "carbon_monoxide": "Carbon monoxide",
+        "cold": "Cold",
+        "connectivity": "Connectivity",
+        "door": "Door",
+        "garage_door": "Garage door",
+        "gas": "Gas",
+        "heat": "Heat",
+        "light": "Light",
+        "lock": "Lock",
+        "moisture": "Moisture",
+        "motion": "Motion",
+        "moving": "Moving",
+        "occupancy": "Occupancy",
+        "opening": "Opening",
+        "plug": "Plug",
+        "power": "Power",
+        "presence": "Presence",
+        "problem": "Problem",
+        "running": "Running",
+        "safety": "Safety",
+        "smoke": "Smoke",
+        "sound": "Sound",
+        "tamper": "Tamper",
+        "update": "Update",
+        "vibration": "Vibration",
+        "window": "Window"
+      }
+    },
+    "sensor_device_classes": {
+      "options": {
+        "absolute_humidity": "Absolute humidity",
+        "apparent_power": "Apparent power",
+        "aqi": "Air quality index",
+        "area": "Area",
+        "atmospheric_pressure": "Atmospheric pressure",
+        "battery": "Battery",
+        "blood_glucose_concentration": "Blood glucose concentration",
+        "carbon_dioxide": "Carbon dioxide",
+        "carbon_monoxide": "Carbon monoxide",
+        "conductivity": "Conductivity",
+        "current": "Current",
+        "data_rate": "Data rate",
+        "data_size": "Data size",
+        "date": "Date",
+        "distance": "Distance",
+        "duration": "Duration",
+        "energy": "Energy",
+        "energy_distance": "Energy per distance",
+        "energy_storage": "Stored energy",
+        "enum": "Sensor",
+        "frequency": "Frequency",
+        "gas": "Gas",
+        "humidity": "Humidity",
+        "illuminance": "Illuminance",
+        "irradiance": "Irradiance",
+        "moisture": "Moisture",
+        "monetary": "Monetary balance",
+        "nitrogen_dioxide": "Nitrogen dioxide",
+        "nitrogen_monoxide": "Nitrogen monoxide",
+        "nitrous_oxide": "Nitrous oxide",
+        "ozone": "Ozone",
+        "ph": "pH",
+        "pm1": "PM1",
+        "pm10": "PM10",
+        "pm25": "PM2.5",
+        "pm4": "PM4",
+        "power": "Power",
+        "power_factor": "Power factor",
+        "precipitation": "Precipitation",
+        "precipitation_intensity": "Precipitation intensity",
+        "pressure": "Pressure",
+        "reactive_energy": "Reactive energy",
+        "reactive_power": "Reactive power",
+        "signal_strength": "Signal strength",
+        "sound_pressure": "Sound pressure",
+        "speed": "Speed",
+        "sulphur_dioxide": "Sulphur dioxide",
+        "temperature": "Temperature",
+        "temperature_delta": "Temperature delta",
+        "timestamp": "Timestamp",
+        "volatile_organic_compounds": "Volatile organic compounds",
+        "volatile_organic_compounds_parts": "Volatile organic compounds parts",
+        "voltage": "Voltage",
+        "volume": "Volume",
+        "volume_flow_rate": "Volume flow rate",
+        "volume_storage": "Stored volume",
+        "water": "Water",
+        "weight": "Weight",
+        "wind_direction": "Wind direction",
+        "wind_speed": "Wind speed"
+      }
+    }
+  }
+}
