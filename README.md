@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <b>Natywna integracja sterowników Grenton z Home Assistant — lokalnie, bez chmury.</b>
+  <b>Natywna integracja sterowników Grenton z Home Assistant - lokalnie, bez chmury.</b>
 </p>
 
 <p align="center">
