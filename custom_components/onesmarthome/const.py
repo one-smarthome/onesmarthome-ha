@@ -1,4 +1,4 @@
-"""Shared constants for the One SmartHome integration.
+"""Shared constants for the OneSmartHome integration.
 
 Centralises the handful of values that several modules need: the HA domain,
 the protocol vocabulary spoken to a CLU, and the timing of the background

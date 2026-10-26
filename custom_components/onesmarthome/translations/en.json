@@ -1,11 +1,11 @@
 {
-  "title": "One SmartHome",
+  "title": "OneSmartHome",
 
   "config": {
     "step": {
       "user": {
-        "title": "Connect One SmartHome to Grenton",
-        "description": "Enter the controller address and access token. One SmartHome will load the interface configuration locally, create supported entities, and keep their state synchronized without using the cloud.",
+        "title": "Connect OneSmartHome to Grenton",
+        "description": "Enter the controller address and access token. OneSmartHome will load the interface configuration locally, create supported entities, and keep their state synchronized without using the cloud.",
         "data": {
           "ip_address": "Controller IP address",
           "token": "Token"
@@ -17,7 +17,7 @@
       },
       "reconfigure": {
         "title": "Reload the Grenton interface",
-        "description": "One SmartHome will download the interface configuration again and refresh the stored copy. Entities that no longer exist in the interface will be removed; new ones will be added.",
+        "description": "OneSmartHome will download the interface configuration again and refresh the stored copy. Entities that no longer exist in the interface will be removed; new ones will be added.",
         "data": {
           "ip_address": "Controller IP address",
           "token": "Token"

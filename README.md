@@ -1,6 +1,9 @@
 
 <p align="center">
-  <img src="custom_components/onesmarthome/brand/icon@2x.png" alt="One SmartHome" width="160">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="custom_components/onesmarthome/brand/dark_logo@2x.png">
+    <img src="custom_components/onesmarthome/brand/logo@2x.png" alt="OneSmartHome" width="360">
+  </picture>
 </p>
 
 <p align="center">
@@ -23,11 +26,11 @@
 
 <p align="center">
   <a href="https://onesmarthome.pl">
-    <img src="docs/dashboard.png" alt="Pulpit One SmartHome na Home Assistant — cały dom na jednym ekranie" width="900">
+    <img src="docs/dashboard.png" alt="Pulpit OneSmartHome na Home Assistant — cały dom na jednym ekranie" width="900">
   </a>
 </p>
 
-# One SmartHome
+# OneSmartHome
 
 Integracja **Home Assistant ↔ Grenton** - łączy sterownik Grenton (CLU) z Home
 Assistant lokalnie po TCP i wystawia obiekty Grentona jako natywne encje HA
@@ -82,7 +85,7 @@ Docelowo wszystko trafia do ośmiu platform HA: `light`, `switch`, `sensor`,
 1. HACS → menu (⋮) → **Custom repositories**.
 2. Wklej `https://github.com/one-smarthome/onesmarthome-ha`, kategoria
    **Integration**, i dodaj.
-3. Zainstaluj **One SmartHome** z listy w HACS.
+3. Zainstaluj **OneSmartHome** z listy w HACS.
 4. Zrestartuj Home Assistant.
 
 ### Wariant B - ręcznie
@@ -97,7 +100,7 @@ Docelowo wszystko trafia do ośmiu platform HA: `light`, `switch`, `sensor`,
 
 Po restarcie:
 
-**Ustawienia → Urządzenia i usługi → Dodaj integrację → One SmartHome**
+**Ustawienia → Urządzenia i usługi → Dodaj integrację → OneSmartHome**
 
 Podaj:
 

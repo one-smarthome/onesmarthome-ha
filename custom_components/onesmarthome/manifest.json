@@ -1,6 +1,6 @@
 {
   "domain": "onesmarthome",
-  "name": "One SmartHome",
+  "name": "OneSmartHome",
   "codeowners": ["@one-smarthome"],
   "config_flow": true,
   "dependencies": [],

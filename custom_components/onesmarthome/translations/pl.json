@@ -1,11 +1,11 @@
 {
-  "title": "One SmartHome",
+  "title": "OneSmartHome",
 
   "config": {
     "step": {
       "user": {
-        "title": "Połącz One SmartHome z Grentonem",
-        "description": "Podaj adres centrali i token dostępu. One SmartHome pobierze konfigurację interfejsu lokalnie, utworzy obsługiwane encje i będzie synchronizować ich stan bez chmury.",
+        "title": "Połącz OneSmartHome z Grentonem",
+        "description": "Podaj adres centrali i token dostępu. OneSmartHome pobierze konfigurację interfejsu lokalnie, utworzy obsługiwane encje i będzie synchronizować ich stan bez chmury.",
         "data": {
           "ip_address": "Adres IP centrali",
           "token": "Token"
@@ -17,7 +17,7 @@
       },
       "reconfigure": {
         "title": "Wczytaj interfejs Grenton ponownie",
-        "description": "One SmartHome pobierze konfigurację interfejsu jeszcze raz i odświeży zapisaną kopię. Encje, których nie ma już w interfejsie, zostaną usunięte; nowe zostaną dodane.",
+        "description": "OneSmartHome pobierze konfigurację interfejsu jeszcze raz i odświeży zapisaną kopię. Encje, których nie ma już w interfejsie, zostaną usunięte; nowe zostaną dodane.",
         "data": {
           "ip_address": "Adres IP centrali",
           "token": "Token"
